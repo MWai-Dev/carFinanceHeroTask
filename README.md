@@ -4,20 +4,15 @@
 
 2. Right click the `cfh-task` folder and open the project in vsCode or your IDE of choice
 
-3. Because there are both the development and a distributable build in the directory you can view either by: 
-    - In the terminal type: `npm run dev` for the development build or
-    - In the terminal type: `npm run preview` for previewing the distributable build (both look and work the same)
+3. You can preview the build by: 
+    - In the terminal typing `npm run dev`
 
-4. Either press `ctrl` + left mouse click on the local link the terminal provides to open it in a browser or copy and paste it into a browser.
+4. Then either `ctrl` + left mouse click on the local link the terminal provides to open it in a browser or copy and paste it into a browser.
 
 
 ## To view on a web server:
 
-I have added the distributable build to my own web server as an option for previewing at [https://mwaistell.site/projects/CarFinanceTask/](https://mwaistell.site/projects/CarFinanceTask/), however it can be added to your own web server by simply:
-
-1. Navigating to the directory: `carFinanceHeroTask/cfh-task/dist` 
-
-2. Upload all the files in this folder to a location on your own server.
+I have added the distributable build to my own web server as an option for previewing at [https://mwaistell.site/projects/CarFinanceTask/](https://mwaistell.site/projects/CarFinanceTask/)
 
 
 ## Page interactivity:
