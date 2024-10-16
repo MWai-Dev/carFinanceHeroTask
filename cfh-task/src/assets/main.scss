@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300..700&family=Mukta:wght@200;300;400;500;600;700;800&family=Protest+Strike&display=swap');
+
+:root {  
+    ---background: #bdc7e7;    
+    ---backgroundContrast: rgb(51, 51, 51);
+    ---inputBackground: rgb(252, 252, 252);
+    ---gradientBlue: linear-gradient(324deg, #3472b9, #d1c7df);
+    --error: #f1f196;
+    --errorBorder: #b9b93d; 
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    background-color: black;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, input, button {
+    font-family: "Montserrat", sans-serif;
+}
+
+// Hero page styling
+
+.heroSection {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: var(---background);
+    width: 100vw;
+    height: 100vh;
+    max-height: 1000px;
+    min-height: fit-content;
+    
+    overflow: hidden;
+
+    &:before {
+        content: '';
+        background: var(---gradientBlue);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0 52%);
+    }
+
+    &:after {
+        content: '';
+        background-image: url(./dots.png);
+        background-size: cover;
+        background-position: bottom;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: 0;
+        opacity: 0.1;
+    }    
+
+    .heroCopy {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        max-width: 500px;
+        padding: 40px;
+        color: var(---backgroundContrast);
+        z-index: 4;
+
+        h1 {
+            font-size: 49px;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 900;
+            line-height: 50px;
+        }
+
+        .carImage {
+            display: flex;
+            justify-content: center;
+            height: 140px;
+            max-width: 100%;
+
+            img {
+                height: 100%;
+                -webkit-filter: drop-shadow(1px 1px 0 #F5F5F5) drop-shadow(-1px 1px 0 #F5F5F5) drop-shadow(1px -1px 0 #F5F5F5) drop-shadow(-1px -1px 0 #F5F5F5);
+                filter: drop-shadow(1px 1px 0 #F5F5F5) drop-shadow(-1px 1px 0 #F5F5F5) drop-shadow(1px -1px 0 #F5F5F5) drop-shadow(-1px -1px 0 #F5F5F5);
+            }
+        }
+
+        .borrowCopy {
+            text-align: center;
+
+            p {
+                margin: 20px 0 -15px;
+            }
+        }
+
+        p {
+            font-weight: 500;
+        }
+    }
+
+    #form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: 20px;
+        color: var(---backgroundContrast);
+        max-width: 1200px;
+        border-radius: 20px;
+        margin: 40px 0;
+
+        &:before {
+            display: flex;
+            content: '';
+            background: #ffffff29;
+            width: 100%;
+            height: 300vh;
+            position: absolute;
+            left: 0;
+            top: -100vh;
+            z-index: 1;
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(10px);
+        }
+
+        .loanSection {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: calc(100% - 60px);
+            font-size: 20px;
+            background: #333333;
+            border-radius: 100px;
+            padding: 0 0 0 20px;
+            z-index: 2;
+
+            & > div {
+                flex: 1 1 auto !important;
+            }
+            
+            label {
+                min-width: 143px;
+                margin: 0 20px 0 10px;
+                font-weight: 600;
+                color: var(---background);
+                text-shadow: 0px 0px 10px #000000;
+            }
+    
+            .loanField {
+                display: flex;
+                align-items: center;
+                padding: 0 10px;
+                border-radius: 100px;
+                max-width: 500px;
+                font-size: 24px;
+                background: var(---inputBackground);
+                color: var(---backgroundContrast);
+                border: 3px solid var(---backgroundContrast);
+                overflow: hidden;
+    
+                .fieldPrefix {
+                    padding: 0 10px;
+                    font-weight: 700;
+                }
+        
+                #loanInput {
+                    padding: 10px 20px;
+                    border: none;
+                    width: 100%;
+                    font-size: 24px;
+                    font-weight: 700;
+                    text-align: center;
+                    background: var(---inputBackground);
+                    appearance: textfield; // fixes incremental arrows always showing in Firefox
+                    
+                    &:focus, &:hover{
+                        border: 0;
+                        outline: none;
+                    }
+                }
+
+                input[type=number]::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                }
+            }
+        }
+
+        .termSection {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 20px; 
+            padding: 0;
+            font-size: 24px;
+            z-index: 2;
+
+            & > label {
+                font-weight: 700;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                list-style: none;
+                list-style-position: inside;
+                padding-left: 0;
+                margin: 20px 0 0;
+                flex-wrap: wrap;
+
+                li {
+                    cursor: pointer;
+                    position: relative;
+                    margin: 0 10px 10px 0;
+
+                    &:first-of-type {
+                        margin-left: 0;
+                    }
+
+                    input {
+                        display: flex;
+                        background: var(---inputBackground);
+                        color: var(---backgroundContrast);
+                        cursor: pointer;
+                        appearance: unset;
+                        width: 125px;
+                        padding: 15px 20px;
+                        border-radius: 100px;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        transition: 120ms transform ease-in-out;
+                        border: 3px solid var(---backgroundContrast);
+                        font-size: 14px;
+                        font-weight: 600;
+                        transition: transform 0.3s;
+
+                        &:after {
+                            transition: transform 0.3s;
+                        }
+
+                        &:checked {
+                            background: var(---backgroundContrast);
+                            color: var(---inputBackground);
+                        }
+
+                        &:not(:checked):hover {
+                            transform: scale(1.05);
+
+                            &:not(:checked):after {
+                                transform: scale(0.95);
+                            }
+                        }
+                    }
+    
+                    label {
+                        display: none;
+                        color: var(---backgroundContrast);
+                        font-size: 0;
+                    }
+
+                    #term_6:after {
+                        content: "6 months";
+                    }
+
+                    #term_12:after {
+                        content: "12 months";
+                    }
+
+                    #term_18:after {
+                        content: "18 months";
+                    }
+
+                    #term_24:after {
+                        content: "24 months";
+                    }
+
+                    #term_36:after {
+                        content: "36 months";
+                    }
+                }                
+            }
+        }
+
+        #formSubmit {
+            width: calc(100% - 40px);
+            padding: 15px 30px;
+            border-radius: 100px;
+            border: 0;
+            font-size: 20px;
+            font-weight: 700;
+            cursor: pointer;
+            background: var(---backgroundContrast);
+            color: var(---background);
+            z-index: 2;
+            transition: color 0.3s;
+
+            &:hover {
+                color: var(---inputBackground);
+            }
+        }
+
+        .error {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            width: -webkit-fill-available;
+            width: -moz-available;
+            margin: 10px 18px 0;
+            border: 3px solid var(--errorBorder);
+            background: var(--error);
+            border-radius: 100px;
+            font-weight: 600;
+            padding: 10px;
+            z-index: 2;
+
+            &:before {
+                content: '!';
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                left: 7px;
+                top: 6px;
+                font-size: 19px;
+                color: var(--errorBorder);
+                border: 3px solid var(--errorBorder);
+                line-height: 20px;
+                width: 19px;
+                height: 20px;
+                border-radius: 100px;
+                padding-left: 1px;
+                -webkit-padding-start: 0;
+            }
+        }
+    }
+
+}
+
+.whiteExtent {
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    background: white;
+    bottom: 0;
+    left: 0;
+    clip-path: polygon(0 0, 100% 79%, 100% 100%, 0% 100%);
+    background: rgb(255,255,255);
+    background: linear-gradient(4deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.4) 51%, rgba(35,33,165,0) 100%);
+
+    &:nth-of-type(3) {
+        background: white;
+        clip-path: polygon(0 55%, 100% 91%, 100% 100%, 0% 100%);
+        z-index: 3;
+    }
+}
+
+@media (max-width: 840px) {
+
+    .heroSection {
+        flex-direction: column;
+
+        &:before {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 55%, 0 52%);
+        }
+
+        .heroCopy {
+            width: auto;
+            padding: 20px 40px 100px;
+
+            .carImage {
+             height: 110px;
+            }
+        }
+
+        #form {
+            padding: 40px 20px 140px;
+            margin: 0;
+
+            &:before {
+                display: none;
+                height: 100%;
+                top: 0;
+            }
+
+            .loanSection {
+                width: calc(100% - 20px);
+                font-size: 16px;
+
+                label {
+                    min-width: 115px;
+                    margin: 0 10px 0 10px;                    
+                }
+
+                .loanField #loanInput {
+                    padding: 10px 20px 10px 0;
+                    font-size: 22px;
+                }
+            }
+
+            .termSection .termField {
+                margin-top: 10px;
+            }
+
+            .error {
+                font-size: 12px;
+                margin: 10px 0;
+
+                &:before {
+                    top: 4px;
+                }
+            }
+
+            .termSection {
+                margin: 50px 0;
+
+                .termField .termSelections {
+                    margin: 0;
+    
+                    li {
+                        margin: 0 0px 10px 0;
+    
+                        input {
+                            width: 105px;
+                            padding: 13px 15px;
+                            font-size: 12px;
+                            margin: 3px;
+                        }
+                    }    
+                }
+            }
+
+            #formSubmit {
+                width: 100%;
+            }
+        }
+
+        .whiteExtent:nth-of-type(3) {
+            z-index: 0;
+        }
+    }
+
+}
+
+// Application form page styling
+
+.application {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: var(---gradientBlue);
+    width: 100vw;
+    height: 100vh;
+
+    .recap {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        z-index: 1;
+
+        & > div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            flex: 1 1 calc(50% - 62px);
+            margin: 20px;
+            background: var(---inputBackground);
+            border: 1px solid var(---backgroundContrast);
+            text-align: center;
+            border-radius: 20px;
+            overflow: hidden;
+
+            p {
+                width: calc(100% - 40px);
+                margin: 0;
+                padding: 10px 20px;
+                background: var(---backgroundContrast);
+                color:var(---background);
+                font-weight: 500;
+            }
+
+            h3 {
+                margin: 10px;
+            }
+        }
+    }
+
+    h1 {
+        z-index: 4;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 840px) {
+
+    .application {
+
+        .recap > div {
+            flex: 1 1 100%;
+        }
+    
+        h1 {
+            font-size: 26px;
+        }
+
+    }
+    
+}
+
+@-moz-document url-prefix() {
+
+    .heroSection {
+        height: 100%;
+        max-height: fit-content;
+        min-height: 1000px;
+
+        .heroCopy {
+            padding: 20px 40px 20px;
+        }
+
+        #form {
+            padding: 140px 20px;
+            margin: 0;
+        }
+    }
+
+}

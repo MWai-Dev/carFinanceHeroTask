@@ -1,0 +1,30 @@
+Looking at all the example sites they had a number of elements in common in their site hero sections, so I didn't want to fully reinvent the wheel as these designs may have been tested to work for this type of audience since many used them. They mostly share in common a tagline, a picture of a car (commonly white) to easily identify what the loan/finance is for, some T&C's about the rates and then a form either at the top or just below the other elements.
+
+So for the design of this hero section I felt it was important for the form to be easily accessible by being as close to the top as possible, so I decided to adapt the vertically split approach with the form initially visible on the right and other elements on the left. However I realised on devices with the more portrait screens like mobiles some of it would have to sit below the initial screen fold (even only partially) and require some scrolling.
+
+I didn't want the header to be too plain like one or two of the examples, I wanted to add some interesting flair and texture to the hero section to make it more appealing, while still thinking about legibility and accessibility of the important foreground elements.
+
+
+CREATING THE MOBILE DESIGN
+
+I started with a mobile first approach initially creating the mobile design while thinking about how that design will scale up with bigger screen sizes. As it made sense for all the non-form content to come first on mobile to inform the user what the form is for, I created a subtle split in colours to slightly separate the two sections. 
+
+I used a soft gradient from light purple to a semi light blue for the background of the top section to not make it too plain but also again keep everything in the foreground legible. The bottom section I wanted the form elements to feel like slightly floating rather than just an encased form and since we already split the sections with the background design this meant I could still do something interesting with the background. I didn't use a gradient this time but instead used some shapes that stepped down in colours at angles from light blues to white. 
+
+The very bottom white step would also allow the hero section to connect to a normal white site below it in an interesting way. Finally to give some extra texture to the design I added a faint overlay pattern of dots in the background that fades along the middle in a wave pattern.
+
+Alongside the Form elements being separate floating elements over the background I wanted them to feel friendly and inviting to use so although there is some big contrast between form elements and their text I decided to give them circle rounded edges to achieve this and make them more interesting than plain rectangle fields or buttons.
+
+
+CREATING THE DESKTOP AND TABLET DESIGN
+
+Knowing I was going to use a horizontal split layout for landscape screens to keep everything visible at the top, I was able to make all the elements from the mobile design also fit here too. However I felt the floating loan form elements didn't stand out quite as much from the other foreground content due to the extra space for the slightly darker side of the gradient it sat over. So I thought it would be nice and interesting to create a frosted glass pane that sits behind it but over the background elements to soften them down in appearance and darkness and help the form stand out. 
+
+I finally designed a custom error message element that fit with the design of other form elements but used some warning yellow tones and could sit under the loan amount field if the user added a value less than £1,000 or £20,000. 
+
+
+TYPOGRAPHY
+
+I went with two fonts that can be used online and offline, I used 'Montserrat' for most of the text as it's clean and renders very well in web browsers, I also went for 'Bebas Neue' for the tagline as it's very good at making bold headings and taglines feel big and stand out with it's vertical nature, while also being easily readable without needing a lot of kerning between letters and having to take up alot of space. 
+
+I used bolder font weights to highlight key lending information text for quicker reading and secondary reference, I also used some varying font sizes depending on the type of information being displayed.

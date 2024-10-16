@@ -1,0 +1,29 @@
+:root {
+  ---primary: black;
+  ---secondary: white;
+  ---borders: red;
+}
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+}
+.heroSection #form {
+  padding: 20px;
+  background: var(---primary);
+  color: var(---secondary);
+}
+.heroSection .loanSection {
+  display: flex;
+  align-items: center;
+  margin: 0 0 20px;
+}
+.heroSection .loanSection .loanField {
+  display: flex;
+  padding: 10px;
+  border: 2px solid var(---borders);
+  width: 600px;
+  margin-left: 20px;
+}
+
+/*# sourceMappingURL=main.css%23.map */
